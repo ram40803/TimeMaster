@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel = "Stylesheet" href = "index.css">
+</head>
+<body>
+    <div class = "menu">
+        <button id = "clockButton" onclick = "clockButton()">Clock</button>
+        <button id = "stopwatchButton" onclick = "stopwatchButton()">Stopwatch</button>
+        <button id = "timerButton" onclick = "timerButton()">Timer</button>
+    </div>
+
+    <div id = "clockDiv">
+        <h1 id = "timeText" class = "text">00:00:00</h1>
+    </div>
+
+    <div id = "stopwatchDiv">
+        <div class = "textAndLaps">
+            <h1 id = "stopwatchText" class = "text">00:00:00</h1>
+            <div id = "laps">
+                <table id = "lapTable">
+                    <tr><th>Lap</th><th>Total Time</th></tr>
+                </table>
+            </div>
+        </div>
+        <div class="stopwatchMenu">
+            <button id = "markupButton" onclick = "stopwatchMarkup()"><b>Markup</b></button>
+            <button id = "startStopButton" onclick = "stopwatchStartStop()"><b>Start</b></button>
+            <button id = "resetButton" onclick = "stopwatchReset()"><b>Reset</b></button>
+        </div>
+    </div>
+
+    <div id = "timerDiv">
+        <div id="timerInputs">
+            <input type="number" id="hours" placeholder="HH" min="0">
+            <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+            <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+        </div>
+        <h1 id = "timerText" class = "text">00:00:00</h1>
+        <div class = "timerMenu">
+            <button id="start" onclick = "startTimer()">Start</button>
+            <button id="stop" onclick = "stopTimer()">Stop</button>
+            <button id="reset" onclick = "resetTimer()">Reset</button>
+        </div>
+    </div>
+    <script src = "index.js"></script>
+</body>
+</html>
